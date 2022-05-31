@@ -1,0 +1,8 @@
+mpmath==1.2.1
+mypy==0.960
+mypy-extensions==0.4.3
+numpy==1.22.4
+sympy==1.10.1
+tomli==2.0.1
+typing_extensions==4.2.0
+unyt==2.8.0
