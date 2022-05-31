@@ -1,22 +1,30 @@
 import numpy as np
-from unyt import km
+from unyt import km, m
 from time import time
 
-int_data = list(range(1000000))
-float32_data = np.array(int_data, dtype='float32')*km
-float32_data2 = np.array(int_data, dtype='float32')
+M1 = 10000
 
+int_data = list(range(12*31*24))
+a = np.array(int_data, dtype='float32')*km
+b = np.array(int_data, dtype='float32')*m
+a_ = np.array(int_data, dtype='float32')
+b_ = np.array(int_data, dtype='float32')
+
+print("empezamos")
 t0 = time()
 
-for i in range(1000):
-    np.sum(float32_data)
+for i in range(M1):
+    #np.sum(float32_data)
+    a + b*3
 
 t1 = time()
 
-for i in range(1000):
-    np.sum(float32_data2)
+for i in range(M1):
+    #np.sum(float32_data2)
+    a_ + b_*3
 
 t2 = time()
 
-print(1000*(t1 - t0))
-print(1000*(t2 - t1))
+print("fin")
+print(1*(t1 - t0))
+print(1*(t2 - t1))
